@@ -1,0 +1,29 @@
+<?php namespace {{ namespace }};
+
+/**
+ * Class {{ name }}
+ *
+ * {{ name }} is a concrete factory for Factory2 objects family.
+ */
+class {{ name }} extends AbstractFactory
+{
+    /**
+     * Creates a concrete productA object.
+     *
+     * @return ProductA|Factory2\ProductA
+     */
+    public function createProductA()
+    {
+        return new Factory2\ProductA();
+    }
+
+    /**
+     * Creates a concrete productB object.
+     *
+     * @return ProductA|Factory2\ProductA
+     */
+    public function createProductB()
+    {
+        return new Factory2\ProductB();
+    }
+}

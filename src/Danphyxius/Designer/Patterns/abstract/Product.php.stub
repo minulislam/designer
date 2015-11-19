@@ -1,0 +1,18 @@
+<?php namespace {{ namespace }};
+
+/**
+ * Interface Product
+ *
+ * This contract is not part of the pattern, in general case, each component are not related
+ *
+ */
+interface {{ name }}
+{
+
+    /**
+     * Some useful generic method for all products implementations.
+     *
+     * @return string
+     */
+    public function fire();
+}

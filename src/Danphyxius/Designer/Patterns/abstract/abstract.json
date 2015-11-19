@@ -1,0 +1,51 @@
+{
+  "name": "Abstract Factory Pattern",
+  "documentation": "Sample documentation for abstract factory pattern.",
+  "folders": [
+    "Factory1",
+    "Factory2"
+  ],
+  "files": [
+    {
+      "path": false,
+      "file": "AbstractFactory.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": false,
+      "file": "AbstractProductA.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": false,
+      "file": "AbstractProductB.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": false,
+      "file": "ConcreteFactory1.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": false,
+      "file": "ConcreteFactory2.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": false,
+      "file": "Product.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": "Factory1",
+      "file": "ProductA.php.stub",
+      "comment": "This file is used for that."
+    },
+    {
+      "path": "Factory2",
+      "file": "ProductB.php.stub",
+      "comment": "This file is used for that."
+    }
+  ],
+  "uml": true
+}

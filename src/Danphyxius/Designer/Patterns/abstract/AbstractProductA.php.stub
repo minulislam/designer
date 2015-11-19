@@ -1,0 +1,16 @@
+<?php namespace {{ namespace }};
+
+/**
+ * Class Product
+ */
+abstract class {{ name }} implements Product
+{
+
+
+    /**
+     * Abstract construct for ProductA.
+     *
+     */
+    public function __construct(){}
+
+}

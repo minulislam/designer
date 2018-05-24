@@ -1,5 +1,5 @@
 {
-    "name": "danphyxius/designer",
+    "name": "minulislam/designer",
     "description": "Laravel Package Helper to designer lower context patterns with uml.",
     "license": "MIT",
     "keywords": ["Laravel", "Design Pattern", "Designer", "Pattern", "Uml"],
@@ -10,9 +10,9 @@
         }
     ],
     "require": {
-        "php": ">=5.4.0",
-        "illuminate/support": "4.2.*",
-        "illuminate/filesystem": "4.*",
+        "php": ">=5.6.0",
+        "illuminate/support": "5.5.*",
+        "illuminate/filesystem": "5.*",
         "mustache/mustache": "~2.6"
     },
     "require-dev": {

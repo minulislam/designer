@@ -1,3 +1,7 @@
-<?php namespace Danphyxius\Designer\Templates;
+<?php
 
-class TemplateAlreadyExists extends \Exception {}
+namespace Danphyxius\Designer\Templates;
+
+class TemplateAlreadyExists extends \Exception
+{
+}

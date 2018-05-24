@@ -1,9 +1,11 @@
-<?php namespace Danphyxius\Designer\Filesystem;
+<?php
 
-use \Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
+namespace Danphyxius\Designer\Filesystem;
 
-class Filesystem {
+use Illuminate\Filesystem\Filesystem as IlluminateFilesystem;
 
+class Filesystem
+{
     /**
      * Create a new Generator instance.
      *
@@ -39,13 +41,10 @@ class Filesystem {
      */
     public function exists($file)
     {
-        if ( ! $this->file->exists($file) )
-        {
+        if (! $this->file->exists($file)) {
             throw new FileNotFound($file);
         }
 
         return $this->file->exists($file);
     }
-
-
 }

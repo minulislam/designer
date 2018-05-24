@@ -1,13 +1,14 @@
-<?php namespace Danphyxius\Designer\Generators;
+<?php
+
+namespace Danphyxius\Designer\Generators;
 
 use Danphyxius\Designer\Compilers\Compiler;
-use Danphyxius\Designer\Compilers\MustacheCompiler;
-use Danphyxius\Designer\Console\GeneratorTrait;
 use Danphyxius\Designer\Filesystem\Filesystem;
+use Danphyxius\Designer\Console\GeneratorTrait;
+use Danphyxius\Designer\Compilers\MustacheCompiler;
 
 class Generator
 {
-
     use GeneratorTrait;
 
     /**
@@ -45,13 +46,11 @@ class Generator
      */
     public function make(Input $input, $template)
     {
-        if(! $template = json_decode($this->file->get($template)) ) {
+        if (! $template = json_decode($this->file->get($template))) {
             return false;
         }
 
         //todo: factorymethod for $this->template->create for each template, create new template class for each generate pattern
-        return $this->createTemplate( $this->file, $template, $input );
+        return $this->createTemplate($this->file, $template, $input);
     }
-
-
 }

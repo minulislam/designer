@@ -1,24 +1,24 @@
-<?php namespace Danphyxius\Designer\Compilers;
+<?php
 
-use Danphyxius\Designer\Engines\Engine;
+namespace Danphyxius\Designer\Compilers;
+
 use Danphyxius\Designer\Engines\MustacheFactory;
-use Mustache_Engine;
 
-class MustacheCompiler extends TemplateCompiler implements Compiler {
-
+class MustacheCompiler extends TemplateCompiler implements Compiler
+{
     /**
      * Create a new Mustache Compiler instance.
      * @param MustacheFactory $factory
      * @param array $options
      */
-    function __construct(MustacheFactory $factory, $options = array())
+    public function __construct(MustacheFactory $factory, $options = [])
     {
         parent::__construct($factory, $options);
     }
 
     /**
      * Compile the template with
-     * given data
+     * given data.
      *
      * @param $template
      * @param $data

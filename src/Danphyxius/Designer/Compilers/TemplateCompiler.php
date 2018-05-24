@@ -1,11 +1,13 @@
-<?php namespace Danphyxius\Designer\Compilers;
+<?php
+
+namespace Danphyxius\Designer\Compilers;
 
 use Danphyxius\Designer\Engines\Factory;
 
-abstract class TemplateCompiler {
-
+abstract class TemplateCompiler
+{
     /**
-     * Engine to compile template
+     * Engine to compile template.
      */
     protected $engine;
 
@@ -14,18 +16,17 @@ abstract class TemplateCompiler {
      * @param Factory $engineFactory
      * @param array $options
      */
-    public function __construct(Factory $engineFactory, $options = array())
+    public function __construct(Factory $engineFactory, $options = [])
     {
         $this->engine = $engineFactory->createEngine($options);
     }
 
     /**
      * Compile the template with
-     * given data
+     * given data.
      *
      * @param $template
      * @param $data
      */
     abstract public function compile($template, $data);
-
 }

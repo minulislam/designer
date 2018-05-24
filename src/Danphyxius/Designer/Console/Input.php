@@ -1,8 +1,9 @@
-<?php namespace Danphyxius\Designer\Console;
+<?php
+
+namespace Danphyxius\Designer\Console;
 
 class Input
 {
-
     /**
      * @var string
      */
@@ -37,7 +38,6 @@ class Input
         $this->properties = $properties;
     }
 
-
     /**
      * @param $tree
      * @return string
@@ -52,10 +52,8 @@ class Input
      */
     public function arguments()
     {
-        return implode(', ', array_map(function($property)
-        {
-            return '$' . $property;
+        return implode(', ', array_map(function ($property) {
+            return '$'.$property;
         }, $this->properties));
     }
-
 }

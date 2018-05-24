@@ -1,18 +1,19 @@
-<?php namespace Danphyxius\Designer\Engines;
+<?php
+
+namespace Danphyxius\Designer\Engines;
 
 use Mustache_Engine;
 
-class MustacheFactory extends Factory{
-
+class MustacheFactory extends Factory
+{
     /**
-     * Create new engine
+     * Create new engine.
      *
      * @param array $options
      * @return Engine a new engine
      */
-    public function createEngine($options = array())
+    public function createEngine($options = [])
     {
         return new Mustache\Engine(new Mustache_Engine($options));
     }
-
 }

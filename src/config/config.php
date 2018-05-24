@@ -1,22 +1,23 @@
 <?php
-return array(
+
+return [
     'base'   => 'app/lib',
-    'pattern' => array(
-        'creational' => array(
+    'pattern' => [
+        'creational' => [
             'abstract',
-            'factory-method'
-        ),
-        'structural' => array(
+            'factory-method',
+        ],
+        'structural' => [
             'adapter',
             'decorator',
             'composite',
-            'facade'
-        ),
-        'behavioral' => array(
+            'facade',
+        ],
+        'behavioral' => [
             'observer',
             'strategy',
             'template-method',
-            'chain-of-responsibility'
-        )
-    )
-);
+            'chain-of-responsibility',
+        ],
+    ],
+];

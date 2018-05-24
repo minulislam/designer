@@ -1,14 +1,15 @@
-<?php namespace Danphyxius\Designer\Commands;
+<?php
 
-use Danphyxius\Designer\Generators\Generator;
-use Danphyxius\Designer\Parsers\InputParser;
+namespace Danphyxius\Designer\Commands;
+
 use Illuminate\Console\Command;
+use Danphyxius\Designer\Parsers\InputParser;
+use Danphyxius\Designer\Generators\Generator;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Input\InputArgument;
 
 class GenerateCommand extends Command
 {
-
     /**
      * The console command name.
      *
@@ -65,12 +66,10 @@ class GenerateCommand extends Command
 
         // Actually create the files with the correct boilerplate.
 
-
-        if( $this->generator->make( $commandInput, $stub ) ) {
-            $this->info('Now i will generate a ' . $pattern . ' Pattern for path ' . $path . ', with base ' . $base);
+        if ($this->generator->make($commandInput, $stub)) {
+            $this->info('Now i will generate a '.$pattern.' Pattern for path '.$path.', with base '.$base);
             $this->info('All done! Your pattern has now been generated!');
         }
-
     }
 
     /**
@@ -82,7 +81,7 @@ class GenerateCommand extends Command
     {
         return [
             ['path', InputArgument::REQUIRED, 'The class path for the pattern to generate.'],
-            ['pattern', InputArgument::REQUIRED, 'The pattern to create.']
+            ['pattern', InputArgument::REQUIRED, 'The pattern to create.'],
         ];
     }
 
@@ -95,8 +94,7 @@ class GenerateCommand extends Command
     {
         return [
             ['properties', null, InputOption::VALUE_OPTIONAL, 'A comma-separated list of properties for the command.', null],
-            ['base', null, InputOption::VALUE_OPTIONAL, 'The path to where your domain root is located.', 'app']
+            ['base', null, InputOption::VALUE_OPTIONAL, 'The path to where your domain root is located.', 'app'],
         ];
     }
-
 }

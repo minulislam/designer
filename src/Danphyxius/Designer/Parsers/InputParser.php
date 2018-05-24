@@ -1,4 +1,6 @@
-<?php namespace Danphyxius\Designer\Parsers;
+<?php
+
+namespace Danphyxius\Designer\Parsers;
 
 class InputParser implements Parser
 {
@@ -8,7 +10,7 @@ class InputParser implements Parser
      * @param $args
      * @return CommandInput
      */
-    public function parse($args = array())
+    public function parse($args = [])
     {
         return new Input($this->parseInput($args));
     }
@@ -28,11 +30,11 @@ class InputParser implements Parser
         $pattern = strtolower($args['pattern']);
 
         $tree = implode('/', $segments);
-        $tree = ( substr($base, -1) === '/' ) ? $base.$tree : $base . '/' . $tree;
+        $tree = (substr($base, -1) === '/') ? $base.$tree : $base.'/'.$tree;
 
         $properties = $this->parseProperties($args['properties']);
 
-        return array($pattern, $namespace, $tree, $properties);
+        return [$pattern, $namespace, $tree, $properties];
     }
 
     /**
@@ -45,5 +47,4 @@ class InputParser implements Parser
     {
         return preg_split('/ ?, ?/', $properties, null, PREG_SPLIT_NO_EMPTY);
     }
-
 }

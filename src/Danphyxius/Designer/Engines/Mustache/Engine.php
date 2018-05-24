@@ -1,10 +1,12 @@
-<?php namespace Danphyxius\Designer\Engines\Mustache;
+<?php
 
-use \Danphyxius\Designer\Engines\Engine as BaseEngine;
+namespace Danphyxius\Designer\Engines\Mustache;
+
 use Mustache_Engine;
+use Danphyxius\Designer\Engines\Engine as BaseEngine;
 
-class Engine implements BaseEngine {
-
+class Engine implements BaseEngine
+{
     /**
      * @var Mustache_Engine
      */
@@ -13,14 +15,14 @@ class Engine implements BaseEngine {
     /**
      * @param Mustache_Engine $engine
      */
-    function __construct(Mustache_Engine $engine)
+    public function __construct(Mustache_Engine $engine)
     {
         $this->engine = $engine;
     }
 
     /**
      * Compile the template with
-     * given data
+     * given data.
      *
      * @param $template
      * @param $data

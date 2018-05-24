@@ -1,13 +1,13 @@
-<?php namespace Danphyxius\Designer\Parsers;
+<?php
 
+namespace Danphyxius\Designer\Parsers;
 
-interface Parser {
-
+interface Parser
+{
     /**
      * Parse the command input.
      * @param array $args
      * @return mixed
      */
-    public function parse($args = array());
-
+    public function parse($args = []);
 }

@@ -1,15 +1,16 @@
-<?php namespace Danphyxius\Designer\Engines;
+<?php
 
-interface Engine {
+namespace Danphyxius\Designer\Engines;
 
+interface Engine
+{
     /**
      * Compile the template with
-     * given data
+     * given data.
      *
      * @param $template
      * @param $data
      * @return mixed
      */
     public function render($template, $data);
-
 }

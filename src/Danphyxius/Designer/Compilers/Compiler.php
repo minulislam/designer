@@ -1,10 +1,12 @@
-<?php namespace Danphyxius\Designer\Compilers;
+<?php
 
-interface Compiler {
+namespace Danphyxius\Designer\Compilers;
 
+interface Compiler
+{
     /**
      * Compile the template with
-     * given data
+     * given data.
      *
      * @param $template
      * @param $data
